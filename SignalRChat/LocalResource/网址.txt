@@ -1,0 +1,13 @@
+入门ASP.NET SignalR2.0
+https://www.cnblogs.com/vance/p/SignalR.html
+
+ASP.NET Core SignalR 入门
+https://docs.microsoft.com/zh-cn/aspnet/core/tutorials/signalr?view=aspnetcore-2.2&tabs=visual-studio
+
+
+https://docs.microsoft.com/zh-cn/aspnet/core/signalr/hubs?view=aspnetcore-2.2
+
+
+https://www.cnblogs.com/cgzl/p/9515516.html
+
+https://www.cnblogs.com/panzi/category/757949.html
