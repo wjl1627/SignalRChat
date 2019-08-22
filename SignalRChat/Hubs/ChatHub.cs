@@ -54,11 +54,23 @@ namespace SignalRChat.Hubs
                 await Clients.User(reUserId).SendAsync("ReceiveMessage", user, reUserId, message);
         }
         /// <summary>
+        /// 获取当前用户的Id
+        /// 这一步主要是为了方便前端页面打开的时候，能显示自己的ID
+        /// </summary>
+        /// <returns></returns>
+        public async Task GetCurrentUserId()
+        {
+            var connectionId = Context.ConnectionId;//这个连接ID
+            var currentUserId = Context.UserIdentifier;//这就是我们重写的GetUserId
+            //给自己发消息
+            await Clients.User(currentUserId).SendAsync("SenUserId", currentUserId);
+        }
+        /// <summary>
         /// 创建连接的时候会走这里
         /// </summary>
         /// <returns></returns>
         public override Task OnConnectedAsync()
-        {
+        {            
             return base.OnConnectedAsync();
         }
         /// <summary>
